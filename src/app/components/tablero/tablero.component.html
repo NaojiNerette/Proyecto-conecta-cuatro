@@ -1,0 +1,7 @@
+<div class="tablero">
+  <div *ngFor="let fila of filas; let y = index" class="d-flex justify-content-center">
+    <div *ngFor="let columna of columnas; let x = index" class="celda" (click)="colocarFicha(x)">
+      <div [ngClass]="{'roja': tablero[y][x] === 'R', 'amarilla': tablero[y][x] === 'A'}"></div>
+    </div>
+  </div>
+</div>
